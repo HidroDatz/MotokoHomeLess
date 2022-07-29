@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import Person "person";
 import Attitude "custom";
 import Animal "animal";
@@ -25,31 +25,7 @@ actor {
 
     // Challenge 1
     public func fun() : async Attitude.Attitude {
-=======
-import Custom "custom";
-import Animal "animal";
-import List "mo:base/List";
-import CustomList "list";
-import Principal "mo:base/Principal";
-import HashMap "mo:base/HashMap";
-import Nat "mo:base/Nat";
-import Result "mo:base/Result";
-import Cycles "mo:base/ExperimentalCycles";
 
-actor {
-    // Challenge 2
-    public type Animal = Animal.Animal;
-
-    let default_champion : Custom.Champion = {
-        name = "yasuo";
-        hp = 10000;
-        damage = 1000;
-        character_class = "God";
-    };
-
-    // Challenge 1
-    public func fun() : async Custom.Champion {
->>>>>>> 2ce6595d24a934a92ff650529c18ecc068a9cf00
         return default_champion;
     };
 
@@ -171,8 +147,7 @@ actor {
     };
 
 
-<<<<<<< HEAD
+
+
 }
-=======
-}
->>>>>>> 2ce6595d24a934a92ff650529c18ecc068a9cf00
+
