@@ -48,7 +48,7 @@ actor {
 
   //  Challenge 6
   public func is_even (n : Nat) : async Bool {
-    (n % 2 == 0);
+    return(n % 2 == 0);
   };
 
   //  Challenge 7
