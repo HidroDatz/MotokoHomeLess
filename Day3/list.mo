@@ -15,10 +15,10 @@ module {
     public func last<T>(list : List<T>) : ?T {
         switch(list){
             case(null) return null;
-            case(?(element, null)) return element;
+            case(?(element, null)) return ?element;
             case(?(element, next_list)) return (last<T>(next_list));
         };
-    }:
+    };
 
     // Challenge 9
     public func size<T>(list : List<T>) : Nat {
@@ -35,20 +35,8 @@ module {
     public func get<T>(list : List<T>, n : Nat) : ?T {
         switch(list, n){
             case(null, _) return null; // Not found
-            case(?(element, next_list),0) return element;
+            case(?(element, next_list),0) return ?element;
             case(?(element, next_list), n) return get<T>(next_list, n - 1); 
         };
-    };
-
-    // Challenge 11
-    public func previous<T>(l : List<T>, p : List<T>) : List<T> {
-        switch(l) {
-            case(null) return p;
-            case(?(value, t)) return previous<T>(t, ?(value, r));
-        };
-    };
-
-    public func reverse<T>(l : List<T>) : List<T> {
-        return previous(l, null);
     };
 }
